@@ -1,7 +1,9 @@
 # REDUX-REACT-NATIVE
-Redux react native
+Pequena aplicação de telas e navegação de login com hooks e redux.
 # Dependencias do projeto
 ### npm install --save react-redux
 ### npm install --save redux
+## npm install @react-navigation/native
+### npm install @react-navigation/stack
 # Recurso
-- Apliquei conhecimentos de redux,manipular array, Hooks
+- Utilizei navegação stack para simular formularios de login,redux para persistir dados ,manipulação array e hooks
