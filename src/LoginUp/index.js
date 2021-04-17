@@ -1,9 +1,22 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, TextInput, SafeAreaView, TouchableOpacity, Text } from 'react-native';
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
+import { editEmail, editSenha } from "../acition/action"
+
 
 export default function Login() {
     const user = useSelector(state => state)
+    const dispatch = useDispatch();
+
+    function change(item) {
+        dispatch(editEmail(item))
+
+    }
+
+    function changeSenha(item) {
+        dispatch(editSenha(item))
+
+    }
 
     return (
         <SafeAreaView>
@@ -16,7 +29,7 @@ export default function Login() {
                     placeholder="Email"
                     autoCompleteType='off'
                     value={user.ath.email}
-
+                    onChangeText={(item) => change(item)}
                 />
 
 
@@ -26,7 +39,7 @@ export default function Login() {
                     placeholder="Senha"
                     autoCompleteType='off'
                     value={user.ath.senha}
-
+                    onChangeText={(item) => changeSenha(item)}
 
                 />
 

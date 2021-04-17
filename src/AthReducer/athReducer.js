@@ -1,16 +1,34 @@
 const user = {
-    email: "Kenjifamil@gmaial.com",
-    senha: "12123454"
+    email: 'kenjimaeda@gmail.com',
+    senha: '2121212'
+    // ele não passa number
 }
 
-const AthReducer = (state = user, action) => {
-    if (state.length == 0) {
+const AthReducer = (state = [], action) => {
+    if (state.lengt == 0) {
 
         return user
+
+    }
+
+    switch (action.type) {
+        case "editEmail":
+            return {
+                ...state, email: action.payload.email,
+            }
+    }
+
+    switch (action.type) {
+        case "editSenha":
+            return {
+
+                ...state, senha: action.payload.senha,
+            }
+
     }
 
 
-    return state;
-}
+    return user;
 
+}
 export default AthReducer;

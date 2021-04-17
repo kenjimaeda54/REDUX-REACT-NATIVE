@@ -1,13 +1,12 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from "redux"
 import AthReducer from "../AthReducer/athReducer"
 
 
 const Reducers = combineReducers({
 
-    // ath: poderia ser qualquer variavel   
+    //ath pode ser qualquer nome ele sera referencia para as constantes 
+    ath: AthReducer
 
-    ath: AthReducer,
-
-});
+})
 
 export default Reducers;

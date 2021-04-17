@@ -2,16 +2,16 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from '@react-navigation/stack';
-import { Provider as StoreProvider } from "react-redux";
-import { createStore } from "redux";
+import { Provider as StoreProvider } from "react-redux"
+import { createStore } from "redux"
 
 import Home from "./src/Home"
 import Login from "./src/Login"
 import LoginUp from "./src/LoginUp/"
 import Reducers from "./src/Reducers/reducers"
 
+const store = createStore(Reducers)
 
-let store = createStore(Reducers);
 
 function Navigation() {
 
